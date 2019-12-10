@@ -28,17 +28,35 @@ module Lab3(
 	input 		     [9:0]		SW
 );
 
+// Blank LEDs 6:3
 assign LEDR[6:3] = 4'b0000;
 
+// Latch KEY[0] reset
 reg reset_latch = 1'b0;
 wire reset_latch_wire;
 always @(negedge KEY[0])
 	begin
 		reset_latch <= ~reset_latch;
 	end
-reset_latch_wire = reset_latch;
+assign reset_latch_wire = reset_latch;
 
+// Clock Divider
+wire s_clk;
+clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_latch_wire), .slower_clk(s_clk));
 
+// Latch KEY[1] right/left turn signal
+reg turn_sig_latch = 1'b0;
+wire turn_sig_latch_wire;
+always @(negedge KEY[0])
+	begin
+		turn_sig_latch <= ~turn_sig_latch;
+	end
+assign turn_sig_latch_wire = turn_sig_latch;
 
+// State Machine Parameters
+parameter par_idle = 3'b000;
+parameter par_hazard = 3'b001;
+parameter par_turn_sig_left = 3'b010;
+parameter par_turn_sig_right = 3'b011;
 
 endmodule
