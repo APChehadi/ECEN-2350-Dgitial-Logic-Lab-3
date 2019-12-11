@@ -7,8 +7,6 @@ module state_machine(
 
 	//////////// CLOCK //////////
 	input 		          		ADC_CLK_10,
-	input 		          		MAX10_CLK1_50,
-	input 		          		MAX10_CLK2_50,
 
 	//////////// SEG7 //////////
 	output		     [7:0]		HEX0,
