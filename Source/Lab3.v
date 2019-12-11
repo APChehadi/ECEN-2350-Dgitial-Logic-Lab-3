@@ -38,7 +38,7 @@ counter C0(.clock(s_clk), .count(address));
 
 ////////////// Instantiate Memory //////////////
 wire [7:0] data;
-wire SW1, SW0, KEY1, KEY0;
+wire SW0, SW1, KEY0, KEY1;
 ctl_mem CM0(.address(address), .clock(ADC_CLK_10), .q(data));
 
 assign SW1 = SW[9] ? data[3] : SW[1];

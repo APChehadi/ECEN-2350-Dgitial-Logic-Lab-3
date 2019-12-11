@@ -59,16 +59,14 @@ always @(negedge KEY[1])
 assign turn_sig_latch_wire = turn_sig_latch;
 
 // Clock Divider
-wire s_clk;
-clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_latch_wire), .slower_clk(s_clk));
 wire mem_clk;
 clock_divider #(25_000_000) CD1(.clk(ADC_CLK_10), .reset_n(reset_latch_wire), .slower_clk(mem_clk));
 
 wire [2:0] CurrentState;
 wire [2:0] NextState;
 
-CSL CSL0(.CLK(s_clk), .reset_n(reset_latch), .NextState(NextState), .CurrentState(CurrentState));
+CSL CSL0(.CLK(mem_clk), .reset_n(reset_latch), .NextState(NextState), .CurrentState(CurrentState));
 NSL NSL0(.turn_sig_latch(turn_sig_latch_wire), .SW(SW[1:0]), .CurrentState(CurrentState), .NextState(NextState));
-OL OL0(.CLK(s_clk), .reset_n(reset_latch), .CurrentState(CurrentState), .SW(SW[1:0]), .HEX0(HEX0), .LEDR_L(LEDR[9:7]), .LEDR_R(LEDR[2:0]));
+OL OL0(.CLK(mem_clk), .reset_n(reset_latch), .CurrentState(CurrentState), .SW(SW[1:0]), .HEX0(HEX0), .LEDR_L(LEDR[9:7]), .LEDR_R(LEDR[2:0]));
 
 endmodule

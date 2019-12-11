@@ -1,6 +1,6 @@
 module counter(
     input                       clk,
-    output   reg    [3:0]       count
+    output   reg    [1:0]       count
 );
 
 always @(posedge clk)
