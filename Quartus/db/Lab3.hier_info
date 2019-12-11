@@ -49,7 +49,6 @@ HEX5[5] <= state_machine:SM0.HEX5
 HEX5[6] <= state_machine:SM0.HEX5
 HEX5[7] <= state_machine:SM0.HEX5
 KEY[0] => KEY0.DATAA
-KEY[0] => latch_out.CLK
 KEY[1] => KEY1.DATAA
 LEDR[0] <= state_machine:SM0.LEDR
 LEDR[1] <= state_machine:SM0.LEDR
@@ -63,14 +62,14 @@ LEDR[8] <= state_machine:SM0.LEDR
 LEDR[9] <= state_machine:SM0.LEDR
 SW[0] => SW0.DATAA
 SW[1] => SW1.DATAA
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => SW[9].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN2
 
 
 |Lab3|clock_divider:CD0

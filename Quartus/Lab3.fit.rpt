@@ -1,5 +1,5 @@
 Fitter report for Lab3
-Wed Dec 11 01:11:24 2019
+Wed Dec 11 02:18:49 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 11 01:11:24 2019       ;
+; Fitter Status                      ; Successful - Wed Dec 11 02:18:49 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
@@ -148,7 +148,7 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -1394,7 +1394,7 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Info (332104): Reading SDC File: 'Lab3.SDC'
+Info (332104): Reading SDC File: 'Lab3.sdc'
 Warning (332174): Ignored filter at Lab3.sdc(10): MAX10_CLK1_50 could not be matched with a port File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.sdc Line: 10
 Warning (332049): Ignored create_clock at Lab3.sdc(10): Argument <targets> is an empty collection File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.sdc Line: 10
     Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK1_50] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.sdc Line: 10
@@ -1414,7 +1414,7 @@ Info (176235): Finished register packing
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "MAX10_CLK1_50" is assigned to location or region, but does not exist in design
     Warning (15706): Node "MAX10_CLK2_50" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1428,33 +1428,33 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 13 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin ADC_CLK_10 uses I/O standard 3.3-V LVTTL at N5 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 9
-    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 20
-    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 20
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 27
+    Info (169178): Pin ADC_CLK_10 uses I/O standard 3.3-V LVTTL at N5 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 8
+    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 19
+    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 19
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
 Info (144001): Generated suppressed messages file C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 5787 megabytes
-    Info: Processing ended: Wed Dec 11 01:11:24 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5781 megabytes
+    Info: Processing ended: Wed Dec 11 02:18:49 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+

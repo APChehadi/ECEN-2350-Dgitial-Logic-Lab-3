@@ -4,7 +4,6 @@
 //=======================================================
 
 module Lab3(
-
 	//////////// CLOCK //////////
 	input 		          		ADC_CLK_10,
 
@@ -45,7 +44,7 @@ assign KEY1 = SW[9] ? data[1] : KEY[1];
 assign KEY0 = SW[9] ? data[0] : KEY[0];
 
 ////////////// Input to Machine //////////////
-state_machine SM0(.ADC_CLK_10(ADC_CLK_10), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),  .KEY({KEY1, KEY0}), .LEDR(LEDR), .SW({SW[9], 7'b0000000, SW1, SW0}));
+state_machine SM0(.ADC_CLK_10(ADC_CLK_10), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),  .KEY({KEY1, KEY0}), .LEDR(LEDR), .SW({SW[9:2], SW1, SW0}));
 
 endmodule
 
