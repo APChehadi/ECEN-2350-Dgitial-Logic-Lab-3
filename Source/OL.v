@@ -1,49 +1,91 @@
 module OL(
- 
-    //////////// SEG7 //////////
-    output           [7:0]      HEX,
- 
-    //////////// KEY //////////
-    input            [7:0]     NUM
-    
+
+    input                       CLK,
+    input                       reset_n,
+    input           [2:0]       CurrentState,
+    input           [1:0]       SW,
+    output          [7:0]       HEX0,
+    output   reg    [2:0]       LEDR_L,
+    output   reg    [2:0]       LEDR_R
+
 );
- 
-    reg [7:0] value;
- 
-//takes decimal number and converts to binary for HEX display based on logic 0 = on, logic 1 = off for each segment
-//if NUM = 'd88 is blank(pos)
-//if NUM = 'd99 is minus sign
-    always @(NUM)
-        begin
-            case(NUM)
-                8'd0: value = 8'b11000000;
-                8'd1: value = 8'b11111001;
-                8'd2: value = 8'b10100100;
-                8'd3: value = 8'b10110000;
-                8'd4: value = 8'b10011001;
-                8'd5: value = 8'b10010010;
-                8'd6: value = 8'b10000010;
-                8'd7: value = 8'b11111000;
-                8'd8: value = 8'b10000000;
-                8'd9: value = 8'b10011000;
- 
-                8'd88: value = 8'b11111111;
+
+// State Machine Parameters
+parameter par_idle = 3'b000;
+parameter par_hazard = 3'b001;
+parameter par_turn_sig_left = 3'b010;
+parameter par_turn_sig_right = 3'b011;
+
+reg hazard_r = 1'b0;
+reg [1:0] turn_cnt= 2'b00;
+
+always @(posedge CLK, negedge reset_n)
+    begin
+        if(reset_n == 0)
+            begin
+                LEDR_R = 3'b000;
+                LEDR_L = 3'b000;
+            end
+        else
+            begin
+            case(CurrentState)
+                par_hazard: 
+                    begin
+                        hazard_r <= ~hazard_r;
+                        if(hazard_r == 1'b0)
+                            begin
+                                LEDR_L <= 3'b000;
+                                LEDR_R <= 3'b000;
+                            end
+                        else if(hazard_r == 1'b1)
+                            begin
+                                LEDR_L <= 3'b111;
+                                LEDR_R <= 3'b111;
+                            end
+                    end
+                par_turn_sig_left: 
+                    begin
+                        LEDR_R <= 3'b000;
+                        turn_cnt <= turn_cnt + 1;
+                        if(turn_cnt == 2'b11)
+                            turn_cnt <= 2'b00;
+                        else
+                            turn_cnt <= turn_cnt + 1'b1;
+                        case(turn_cnt)
+                            2'b01: LEDR_L <= 3'b001;
+                            2'b10: LEDR_L <= 3'b011;
+                            2'b11: LEDR_L <= 3'b111;
+                            default: LEDR_L <= 3'b000;
+                        endcase
+                    end
+                par_turn_sig_right: 
+                    begin
+                        LEDR_L <= 3'b000;
+                        if(turn_cnt == 2'b11)
+                            turn_cnt <= 2'b00;
+                        else
+                            turn_cnt <= turn_cnt + 1'b1;
+                        case(turn_cnt)
+                            2'b01: LEDR_R <= 3'b100;
+                            2'b10: LEDR_R <= 3'b110;
+                            2'b11: LEDR_R <= 3'b111;
+                            default: LEDR_R <= 3'b000;
+                        endcase  
+                    end
+                default: 
+                    begin
+                        LEDR_L <= 3'b000;
+                        LEDR_R <= 3'b000;
+                    end
             endcase
-        end
- 
- 
-    //the HEX display passed is given whatever value determined above
-    assign HEX[7:0] = value;
- 
- 
+        end 
+    end
+
+
+reg[7:0] num;
+always @(CurrentState)
+    num <= CurrentState;
+
+SevenSeg SS0(.HEX(HEX0), .NUM(num));
+
 endmodule
-
-    
-
-
-
-
-
-
-
-

@@ -28,35 +28,33 @@ module Lab3(
 	input 		     [9:0]		SW
 );
 
-// Blank LEDs 6:3
-assign LEDR[6:3] = 4'b0000;
-
-// Latch KEY[0] reset
-reg reset_latch = 1'b0;
-wire reset_latch_wire;
-always @(negedge KEY[0])
-	begin
-		reset_latch <= ~reset_latch;
-	end
-assign reset_latch_wire = reset_latch;
-
 // Clock Divider
 wire s_clk;
 clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_latch_wire), .slower_clk(s_clk));
 
-// Latch KEY[1] right/left turn signal
-reg turn_sig_latch = 1'b0;
-wire turn_sig_latch_wire;
-always @(negedge KEY[0])
-	begin
-		turn_sig_latch <= ~turn_sig_latch;
-	end
-assign turn_sig_latch_wire = turn_sig_latch;
+////////////// Counter //////////////
+wire [1:0] address;
+counter C0(.clock(s_clk), .count(address));
 
-// State Machine Parameters
-parameter par_idle = 3'b000;
-parameter par_hazard = 3'b001;
-parameter par_turn_sig_left = 3'b010;
-parameter par_turn_sig_right = 3'b011;
+////////////// Instantiate Memory //////////////
+wire [7:0] data;
+wire SW1, SW0, KEY1, KEY0;
+ctl_mem CM0(.address(address), .clock(ADC_CLK_10), .q(data));
+
+assign SW1 = SW[9] ? data[3] : SW[1];
+assign SW0 = SW[9] ? data[2] : SW[0];
+assign K1 = SW[9] ? data[1] : KEY[1];
+assign K0 = SW[9] ? data[0] : KEY[0];
+
+////////////// Input to Machine //////////////
+state_machine SM0(.ADC_CLK_10(ADC_CLK_10), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),  .KEY({KEY1, KEY0}), .LEDR(LEDR), .SW({SW[9], 7'b0000000, SW1, SW0}));
 
 endmodule
+
+/* Table for Memory:
+ * Address | SW[1] | SW[0] | KEY[1] | KEY[0] | Resulting State
+ *    0    |   0   |   0   |   1    |   0    | Idle (2)
+ *    1    |   0   |   1   |   1    |   1    | Hazard (7)
+ *    2    |   1   |   0   |   1    |   1    | Left (11)
+ *    3    |   1   |   0   |   0    |   1    | Right (9)
+ */
