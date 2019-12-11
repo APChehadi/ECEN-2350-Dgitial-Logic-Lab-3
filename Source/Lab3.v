@@ -25,33 +25,54 @@ module Lab3(
 	input 		     [9:0]		SW
 );
 
+// Blank LEDs 6:3
+assign LEDR[6:3] = 4'b0000;
+SevenSeg SS1(.HEX(HEX1), .NUM(8'd88));
+SevenSeg SS2(.HEX(HEX2), .NUM(8'd88));
+SevenSeg SS3(.HEX(HEX3), .NUM(8'd88));
+SevenSeg SS4(.HEX(HEX4), .NUM(8'd88));
+SevenSeg SS5(.HEX(HEX5), .NUM(8'd88));
+
+// Wire Declarations
+wire key1_latch;
+wire key1_mem;
+wire key1;
+wire [2:0] CurrentState;
+wire [2:0] NextState;
+wire [2:0] CurrentState_mem;
+wire [2:0] CurrentState_manual;
+
+// Latch KEY[0] reset
+reg reset_latch = 1'b0;
+wire reset_n;
+always @(negedge KEY[0])
+	begin
+		reset_latch <= ~reset_latch;
+	end
+assign reset_n = reset_latch;
+
+// Latch KEY[1] right/left turn signal
+reg turn_sig_latch = 1'b0;
+always @(negedge KEY[1])
+	begin
+		turn_sig_latch <= ~turn_sig_latch;
+	end
+assign key1_latch = turn_sig_latch;
+
 // Clock Divider
 wire s_clk;
-clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(SW[9]), .slower_clk(s_clk));
+clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_n), .slower_clk(s_clk));
 
-////////////// Counter //////////////
-wire [1:0] address;
-counter C0(.clk(s_clk), .count(address));
 
-////////////// Instantiate Memory //////////////
-wire [7:0] data;
-wire SW1, SW0, KEY1, KEY0;
-memory CM0(.address(address), .clock(ADC_CLK_10), .q(data));
+// Instantiate Modules
+CSL CSL0(.CLK(s_clk), .reset_n(reset_n), .NextState(NextState), .CurrentState(CurrentState_manual));
 
-assign SW1 = SW[9] ? data[3] : SW[1];
-assign SW0 = SW[9] ? data[2] : SW[0];
-assign KEY1 = SW[9] ? data[1] : KEY[1];
-assign KEY0 = SW[9] ? data[0] : KEY[0];
+NSL NSL0(.turn_sig_latch(key1_latch), .SW(SW[1:0]), .CurrentState(CurrentState_manual), .NextState(NextState));
 
-////////////// Input to Machine //////////////
-state_machine SM0(.ADC_CLK_10(ADC_CLK_10), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),  .KEY({KEY1, KEY0}), .LEDR(LEDR), .SW({SW[9:2], SW1, SW0}));
+state_machine SM0(.CLK(s_clk), .CurrentState(CurrentState_mem));
+
+output_mux OM0(.CurrentState_memory(CurrentState_mem), .CurrentState_manual(CurrentState_manual), .SW9(SW[9]), .CurrentState(CurrentState));
+
+OL OL0(.CLK(s_clk), .reset_n(reset_n), .CurrentState(CurrentState), .SW(SW[1:0]), .HEX0(HEX0), .LEDR_L(LEDR[9:7]), .LEDR_R(LEDR[2:0]));
 
 endmodule
-
-/* Table for Memory:
- * Address | SW[1] | SW[0] | KEY[1] | KEY[0] | Resulting State
- *    0    |   0   |   0   |   1    |   0    | Idle (2)
- *    1    |   0   |   1   |   1    |   1    | Hazard (7)
- *    2    |   1   |   0   |   1    |   1    | Left (11)
- *    3    |   1   |   0   |   0    |   1    | Right (9)
- */

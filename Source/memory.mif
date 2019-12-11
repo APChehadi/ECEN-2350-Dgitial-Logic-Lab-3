@@ -1,13 +1,13 @@
-DEPTH = 256;
-WIDTH = 8;
+DEPTH = 4;
+WIDTH = 2;
 
-ADDRESS_RADIX = HEX;
+ADDRESS_RADIX = DEC;
 DATA_RADIX = DEC;
 
 CONTENT
 BEGIN
-0 : 2;      % Idle %
-1 : 7;      % Hazard %
-2 : 11;     % Left %
-3 : 9;      % Right %
+0 : 0;      % Idle %
+1 : 1;      % Hazard %
+2 : 2;      % Left %
+3 : 3;      % Right %
 END;

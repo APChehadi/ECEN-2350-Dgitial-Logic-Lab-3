@@ -1,75 +1,170 @@
 |Lab3
-ADC_CLK_10 => ADC_CLK_10.IN3
-HEX0[0] <= state_machine:SM0.HEX0
-HEX0[1] <= state_machine:SM0.HEX0
-HEX0[2] <= state_machine:SM0.HEX0
-HEX0[3] <= state_machine:SM0.HEX0
-HEX0[4] <= state_machine:SM0.HEX0
-HEX0[5] <= state_machine:SM0.HEX0
-HEX0[6] <= state_machine:SM0.HEX0
-HEX0[7] <= state_machine:SM0.HEX0
-HEX1[0] <= state_machine:SM0.HEX1
-HEX1[1] <= state_machine:SM0.HEX1
-HEX1[2] <= state_machine:SM0.HEX1
-HEX1[3] <= state_machine:SM0.HEX1
-HEX1[4] <= state_machine:SM0.HEX1
-HEX1[5] <= state_machine:SM0.HEX1
-HEX1[6] <= state_machine:SM0.HEX1
-HEX1[7] <= state_machine:SM0.HEX1
-HEX2[0] <= state_machine:SM0.HEX2
-HEX2[1] <= state_machine:SM0.HEX2
-HEX2[2] <= state_machine:SM0.HEX2
-HEX2[3] <= state_machine:SM0.HEX2
-HEX2[4] <= state_machine:SM0.HEX2
-HEX2[5] <= state_machine:SM0.HEX2
-HEX2[6] <= state_machine:SM0.HEX2
-HEX2[7] <= state_machine:SM0.HEX2
-HEX3[0] <= state_machine:SM0.HEX3
-HEX3[1] <= state_machine:SM0.HEX3
-HEX3[2] <= state_machine:SM0.HEX3
-HEX3[3] <= state_machine:SM0.HEX3
-HEX3[4] <= state_machine:SM0.HEX3
-HEX3[5] <= state_machine:SM0.HEX3
-HEX3[6] <= state_machine:SM0.HEX3
-HEX3[7] <= state_machine:SM0.HEX3
-HEX4[0] <= state_machine:SM0.HEX4
-HEX4[1] <= state_machine:SM0.HEX4
-HEX4[2] <= state_machine:SM0.HEX4
-HEX4[3] <= state_machine:SM0.HEX4
-HEX4[4] <= state_machine:SM0.HEX4
-HEX4[5] <= state_machine:SM0.HEX4
-HEX4[6] <= state_machine:SM0.HEX4
-HEX4[7] <= state_machine:SM0.HEX4
-HEX5[0] <= state_machine:SM0.HEX5
-HEX5[1] <= state_machine:SM0.HEX5
-HEX5[2] <= state_machine:SM0.HEX5
-HEX5[3] <= state_machine:SM0.HEX5
-HEX5[4] <= state_machine:SM0.HEX5
-HEX5[5] <= state_machine:SM0.HEX5
-HEX5[6] <= state_machine:SM0.HEX5
-HEX5[7] <= state_machine:SM0.HEX5
-KEY[0] => KEY0.DATAA
-KEY[1] => KEY1.DATAA
-LEDR[0] <= state_machine:SM0.LEDR
-LEDR[1] <= state_machine:SM0.LEDR
-LEDR[2] <= state_machine:SM0.LEDR
-LEDR[3] <= state_machine:SM0.LEDR
-LEDR[4] <= state_machine:SM0.LEDR
-LEDR[5] <= state_machine:SM0.LEDR
-LEDR[6] <= state_machine:SM0.LEDR
-LEDR[7] <= state_machine:SM0.LEDR
-LEDR[8] <= state_machine:SM0.LEDR
-LEDR[9] <= state_machine:SM0.LEDR
-SW[0] => SW0.DATAA
-SW[1] => SW1.DATAA
-SW[2] => SW[2].IN1
-SW[3] => SW[3].IN1
-SW[4] => SW[4].IN1
-SW[5] => SW[5].IN1
-SW[6] => SW[6].IN1
-SW[7] => SW[7].IN1
-SW[8] => SW[8].IN1
-SW[9] => SW[9].IN2
+ADC_CLK_10 => ADC_CLK_10.IN1
+HEX0[0] <= OL:OL0.HEX0
+HEX0[1] <= OL:OL0.HEX0
+HEX0[2] <= OL:OL0.HEX0
+HEX0[3] <= OL:OL0.HEX0
+HEX0[4] <= OL:OL0.HEX0
+HEX0[5] <= OL:OL0.HEX0
+HEX0[6] <= OL:OL0.HEX0
+HEX0[7] <= OL:OL0.HEX0
+HEX1[0] <= SevenSeg:SS1.HEX
+HEX1[1] <= SevenSeg:SS1.HEX
+HEX1[2] <= SevenSeg:SS1.HEX
+HEX1[3] <= SevenSeg:SS1.HEX
+HEX1[4] <= SevenSeg:SS1.HEX
+HEX1[5] <= SevenSeg:SS1.HEX
+HEX1[6] <= SevenSeg:SS1.HEX
+HEX1[7] <= SevenSeg:SS1.HEX
+HEX2[0] <= SevenSeg:SS2.HEX
+HEX2[1] <= SevenSeg:SS2.HEX
+HEX2[2] <= SevenSeg:SS2.HEX
+HEX2[3] <= SevenSeg:SS2.HEX
+HEX2[4] <= SevenSeg:SS2.HEX
+HEX2[5] <= SevenSeg:SS2.HEX
+HEX2[6] <= SevenSeg:SS2.HEX
+HEX2[7] <= SevenSeg:SS2.HEX
+HEX3[0] <= SevenSeg:SS3.HEX
+HEX3[1] <= SevenSeg:SS3.HEX
+HEX3[2] <= SevenSeg:SS3.HEX
+HEX3[3] <= SevenSeg:SS3.HEX
+HEX3[4] <= SevenSeg:SS3.HEX
+HEX3[5] <= SevenSeg:SS3.HEX
+HEX3[6] <= SevenSeg:SS3.HEX
+HEX3[7] <= SevenSeg:SS3.HEX
+HEX4[0] <= SevenSeg:SS4.HEX
+HEX4[1] <= SevenSeg:SS4.HEX
+HEX4[2] <= SevenSeg:SS4.HEX
+HEX4[3] <= SevenSeg:SS4.HEX
+HEX4[4] <= SevenSeg:SS4.HEX
+HEX4[5] <= SevenSeg:SS4.HEX
+HEX4[6] <= SevenSeg:SS4.HEX
+HEX4[7] <= SevenSeg:SS4.HEX
+HEX5[0] <= SevenSeg:SS5.HEX
+HEX5[1] <= SevenSeg:SS5.HEX
+HEX5[2] <= SevenSeg:SS5.HEX
+HEX5[3] <= SevenSeg:SS5.HEX
+HEX5[4] <= SevenSeg:SS5.HEX
+HEX5[5] <= SevenSeg:SS5.HEX
+HEX5[6] <= SevenSeg:SS5.HEX
+HEX5[7] <= SevenSeg:SS5.HEX
+KEY[0] => reset_latch.CLK
+KEY[1] => turn_sig_latch.CLK
+LEDR[0] <= OL:OL0.LEDR_R
+LEDR[1] <= OL:OL0.LEDR_R
+LEDR[2] <= OL:OL0.LEDR_R
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= OL:OL0.LEDR_L
+LEDR[8] <= OL:OL0.LEDR_L
+LEDR[9] <= OL:OL0.LEDR_L
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => SW[9].IN1
+
+
+|Lab3|SevenSeg:SS1
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab3|SevenSeg:SS2
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab3|SevenSeg:SS3
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab3|SevenSeg:SS4
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab3|SevenSeg:SS5
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
 
 
 |Lab3|clock_divider:CD0
@@ -126,14 +221,50 @@ reset_n => slw_clk.ENA
 slower_clk <= slw_clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|counter:C0
-clk => count[0]~reg0.CLK
-clk => count[1]~reg0.CLK
-count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|Lab3|CSL:CSL0
+CLK => CurrentState[0]~reg0.CLK
+CLK => CurrentState[1]~reg0.CLK
+CLK => CurrentState[2]~reg0.CLK
+reset_n => CurrentState[0]~reg0.ACLR
+reset_n => CurrentState[1]~reg0.ACLR
+reset_n => CurrentState[2]~reg0.ACLR
+NextState[0] => CurrentState[0]~reg0.DATAIN
+NextState[1] => CurrentState[1]~reg0.DATAIN
+NextState[2] => CurrentState[2]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|memory:CM0
+|Lab3|NSL:NSL0
+turn_sig_latch => temp_NextState.DATAB
+SW[0] => temp_NextState.OUTPUTSELECT
+SW[0] => temp_NextState.OUTPUTSELECT
+SW[1] => temp_NextState.OUTPUTSELECT
+SW[1] => temp_NextState.DATAA
+CurrentState[0] => ~NO_FANOUT~
+CurrentState[1] => ~NO_FANOUT~
+CurrentState[2] => ~NO_FANOUT~
+NextState[0] <= temp_NextState.DB_MAX_OUTPUT_PORT_TYPE
+NextState[1] <= temp_NextState.DB_MAX_OUTPUT_PORT_TYPE
+NextState[2] <= <GND>
+
+
+|Lab3|state_machine:SM0
+CLK => memory:M0.clock
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => count[3].CLK
+CLK => count[4].CLK
+CLK => address[0].CLK
+CLK => address[1].CLK
+CurrentState[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= <GND>
+
+
+|Lab3|state_machine:SM0|memory:M0
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -153,7 +284,7 @@ q[6] <= altsyncram:altsyncram_component.q_a
 q[7] <= altsyncram:altsyncram_component.q_a
 
 
-|Lab3|memory:CM0|altsyncram:altsyncram_component
+|Lab3|state_machine:SM0|memory:M0|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -202,7 +333,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Lab3|memory:CM0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated
+|Lab3|state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -285,211 +416,22 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|Lab3|state_machine:SM0
-ADC_CLK_10 => ADC_CLK_10.IN1
-HEX0[0] <= OL:OL0.HEX0[0]
-HEX0[1] <= OL:OL0.HEX0[1]
-HEX0[2] <= OL:OL0.HEX0[2]
-HEX0[3] <= OL:OL0.HEX0[3]
-HEX0[4] <= OL:OL0.HEX0[4]
-HEX0[5] <= OL:OL0.HEX0[5]
-HEX0[6] <= OL:OL0.HEX0[6]
-HEX0[7] <= OL:OL0.HEX0[7]
-HEX1[0] <= SevenSeg:SS1.HEX
-HEX1[1] <= SevenSeg:SS1.HEX
-HEX1[2] <= SevenSeg:SS1.HEX
-HEX1[3] <= SevenSeg:SS1.HEX
-HEX1[4] <= SevenSeg:SS1.HEX
-HEX1[5] <= SevenSeg:SS1.HEX
-HEX1[6] <= SevenSeg:SS1.HEX
-HEX1[7] <= SevenSeg:SS1.HEX
-HEX2[0] <= SevenSeg:SS2.HEX
-HEX2[1] <= SevenSeg:SS2.HEX
-HEX2[2] <= SevenSeg:SS2.HEX
-HEX2[3] <= SevenSeg:SS2.HEX
-HEX2[4] <= SevenSeg:SS2.HEX
-HEX2[5] <= SevenSeg:SS2.HEX
-HEX2[6] <= SevenSeg:SS2.HEX
-HEX2[7] <= SevenSeg:SS2.HEX
-HEX3[0] <= SevenSeg:SS3.HEX
-HEX3[1] <= SevenSeg:SS3.HEX
-HEX3[2] <= SevenSeg:SS3.HEX
-HEX3[3] <= SevenSeg:SS3.HEX
-HEX3[4] <= SevenSeg:SS3.HEX
-HEX3[5] <= SevenSeg:SS3.HEX
-HEX3[6] <= SevenSeg:SS3.HEX
-HEX3[7] <= SevenSeg:SS3.HEX
-HEX4[0] <= SevenSeg:SS4.HEX
-HEX4[1] <= SevenSeg:SS4.HEX
-HEX4[2] <= SevenSeg:SS4.HEX
-HEX4[3] <= SevenSeg:SS4.HEX
-HEX4[4] <= SevenSeg:SS4.HEX
-HEX4[5] <= SevenSeg:SS4.HEX
-HEX4[6] <= SevenSeg:SS4.HEX
-HEX4[7] <= SevenSeg:SS4.HEX
-HEX5[0] <= SevenSeg:SS5.HEX
-HEX5[1] <= SevenSeg:SS5.HEX
-HEX5[2] <= SevenSeg:SS5.HEX
-HEX5[3] <= SevenSeg:SS5.HEX
-HEX5[4] <= SevenSeg:SS5.HEX
-HEX5[5] <= SevenSeg:SS5.HEX
-HEX5[6] <= SevenSeg:SS5.HEX
-HEX5[7] <= SevenSeg:SS5.HEX
-KEY[0] => reset_latch.CLK
-KEY[1] => turn_sig_latch.CLK
-LEDR[0] <= OL:OL0.LEDR_R[0]
-LEDR[1] <= OL:OL0.LEDR_R[1]
-LEDR[2] <= OL:OL0.LEDR_R[2]
-LEDR[3] <= SW[9].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= OL:OL0.LEDR_L[0]
-LEDR[8] <= OL:OL0.LEDR_L[1]
-LEDR[9] <= OL:OL0.LEDR_L[2]
-SW[0] => SW[0].IN1
-SW[1] => SW[1].IN1
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => LEDR[3].DATAIN
+|Lab3|output_mux:OM0
+CurrentState_memory[0] => CurrentState.DATAB
+CurrentState_memory[1] => CurrentState.DATAB
+CurrentState_memory[2] => CurrentState.DATAB
+CurrentState_manual[0] => CurrentState.DATAA
+CurrentState_manual[1] => CurrentState.DATAA
+CurrentState_manual[2] => CurrentState.DATAA
+SW9 => CurrentState.OUTPUTSELECT
+SW9 => CurrentState.OUTPUTSELECT
+SW9 => CurrentState.OUTPUTSELECT
+CurrentState[0] <= CurrentState.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|state_machine:SM0|SevenSeg:SS1
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab3|state_machine:SM0|SevenSeg:SS2
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab3|state_machine:SM0|SevenSeg:SS3
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab3|state_machine:SM0|SevenSeg:SS4
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab3|state_machine:SM0|SevenSeg:SS5
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab3|state_machine:SM0|clock_divider:CD1
-clk => ~NO_FANOUT~
-reset_n => ~NO_FANOUT~
-slower_clk <= <GND>
-
-
-|Lab3|state_machine:SM0|CSL:CSL0
-CLK => CurrentState[0]~reg0.CLK
-CLK => CurrentState[1]~reg0.CLK
-CLK => CurrentState[2]~reg0.CLK
-reset_n => CurrentState[0]~reg0.ACLR
-reset_n => CurrentState[1]~reg0.ACLR
-reset_n => CurrentState[2]~reg0.ACLR
-NextState[0] => CurrentState[0]~reg0.DATAIN
-NextState[1] => CurrentState[1]~reg0.DATAIN
-NextState[2] => CurrentState[2]~reg0.DATAIN
-CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Lab3|state_machine:SM0|NSL:NSL0
-turn_sig_latch => temp_NextState.DATAB
-SW[0] => temp_NextState.OUTPUTSELECT
-SW[0] => temp_NextState.OUTPUTSELECT
-SW[1] => temp_NextState.OUTPUTSELECT
-SW[1] => temp_NextState.DATAA
-CurrentState[0] => ~NO_FANOUT~
-CurrentState[1] => ~NO_FANOUT~
-CurrentState[2] => ~NO_FANOUT~
-NextState[0] <= temp_NextState.DB_MAX_OUTPUT_PORT_TYPE
-NextState[1] <= temp_NextState.DB_MAX_OUTPUT_PORT_TYPE
-NextState[2] <= <GND>
-
-
-|Lab3|state_machine:SM0|OL:OL0
+|Lab3|OL:OL0
 CLK => hazard_r.CLK
 CLK => turn_cnt[0].CLK
 CLK => turn_cnt[1].CLK
@@ -529,7 +471,7 @@ LEDR_R[1] <= LEDR_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_R[2] <= LEDR_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|state_machine:SM0|OL:OL0|SevenSeg:SS0
+|Lab3|OL:OL0|SevenSeg:SS0
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
