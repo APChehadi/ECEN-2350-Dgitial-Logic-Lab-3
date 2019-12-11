@@ -7,8 +7,6 @@ module Lab3(
 
 	//////////// CLOCK //////////
 	input 		          		ADC_CLK_10,
-	input 		          		MAX10_CLK1_50,
-	input 		          		MAX10_CLK2_50,
 
 	//////////// SEG7 //////////
 	output		     [7:0]		HEX0,
@@ -30,21 +28,21 @@ module Lab3(
 
 // Clock Divider
 wire s_clk;
-clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_latch_wire), .slower_clk(s_clk));
+clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(SW[9]), .slower_clk(s_clk));
 
 ////////////// Counter //////////////
 wire [1:0] address;
-counter C0(.clock(s_clk), .count(address));
+counter C0(.clk(s_clk), .count(address));
 
 ////////////// Instantiate Memory //////////////
 wire [7:0] data;
-wire SW0, SW1, KEY0, KEY1;
-ctl_mem CM0(.address(address), .clock(ADC_CLK_10), .q(data));
+wire SW1, SW0, KEY1, KEY0;
+memory CM0(.address(address), .clock(ADC_CLK_10), .q(data));
 
 assign SW1 = SW[9] ? data[3] : SW[1];
 assign SW0 = SW[9] ? data[2] : SW[0];
-assign K1 = SW[9] ? data[1] : KEY[1];
-assign K0 = SW[9] ? data[0] : KEY[0];
+assign KEY1 = SW[9] ? data[1] : KEY[1];
+assign KEY0 = SW[9] ? data[0] : KEY[0];
 
 ////////////// Input to Machine //////////////
 state_machine SM0(.ADC_CLK_10(ADC_CLK_10), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),  .KEY({KEY1, KEY0}), .LEDR(LEDR), .SW({SW[9], 7'b0000000, SW1, SW0}));

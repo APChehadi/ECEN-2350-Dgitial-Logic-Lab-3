@@ -9,7 +9,7 @@ module clock_divider(
 parameter clk_div = 0;
  
 reg [23:0] div_cntr;
-reg slw_clk;
+reg slw_clk = 0;
  
 always @(posedge clk, negedge reset_n)
     begin

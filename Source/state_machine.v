@@ -26,14 +26,8 @@ module state_machine(
 	input 		     [9:0]		SW
 );
 
-// State Machine Parameters
-parameter par_idle = 3'b000;
-parameter par_hazard = 3'b001;
-parameter par_turn_sig_left = 3'b010;
-parameter par_turn_sig_right = 3'b011;
-
 // Blank LEDs 6:3
-assign LEDR[6:3] = 4'b0000;
+assign LEDR[6:3] = {3'b000, SW[9]};
 SevenSeg SS1(.HEX(HEX1), .NUM(8'd88));
 SevenSeg SS2(.HEX(HEX2), .NUM(8'd88));
 SevenSeg SS3(.HEX(HEX3), .NUM(8'd88));
