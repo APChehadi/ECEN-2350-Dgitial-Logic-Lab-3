@@ -21,13 +21,3 @@ always @(posedge CLK, negedge reset_n)
  
  
 endmodule
-
-    
-
-
-
-
-
-
-
-

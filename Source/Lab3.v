@@ -33,12 +33,6 @@ SevenSeg SS3(.HEX(HEX3), .NUM(8'd88));
 SevenSeg SS4(.HEX(HEX4), .NUM(8'd88));
 SevenSeg SS5(.HEX(HEX5), .NUM(8'd88));
 
-// Wire Declarations
-wire [2:0] CurrentState;
-wire [2:0] NextState;
-wire [2:0] CurrentState_mem;
-wire [2:0] CurrentState_manual;
-
 // Latch KEY[0] reset
 reg reset_latch = 1'b0;
 wire reset_n;
@@ -60,6 +54,12 @@ assign key1_latch = turn_sig_latch;
 // Clock Divider
 wire s_clk;
 clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(reset_n), .slower_clk(s_clk));
+
+// Wire Declarations
+wire [2:0] CurrentState;
+wire [2:0] NextState;
+wire [2:0] CurrentState_mem;
+wire [2:0] CurrentState_manual;
 
 
 // Instantiate Modules
