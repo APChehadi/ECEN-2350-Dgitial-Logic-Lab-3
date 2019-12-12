@@ -1,5 +1,5 @@
 Fitter report for Lab3
-Wed Dec 11 12:37:33 2019
+Wed Dec 11 17:21:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 11 12:37:33 2019       ;
+; Fitter Status                      ; Successful - Wed Dec 11 17:21:08 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
@@ -1590,14 +1590,14 @@ Info (176353): Automatically promoted node clock_divider:CD0|slw_clk  File: C:/U
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node clock_divider:CD0|slw_clk~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v Line: 20
-Info (176353): Automatically promoted node reset_latch  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 48
+Info (176353): Automatically promoted node reset_latch  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 45
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node clock_divider:CD0|slw_clk~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v Line: 20
         Info (176357): Destination node OL:OL0|turn_cnt[0]~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 31
         Info (176357): Destination node OL:OL0|turn_cnt[1]~1 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 31
         Info (176357): Destination node OL:OL0|hazard_r~1 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 19
-        Info (176357): Destination node reset_latch~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 48
+        Info (176357): Destination node reset_latch~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 45
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1618,12 +1618,12 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 13 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
@@ -1641,9 +1641,9 @@ Warning (169177): 13 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 19
 Info (144001): Generated suppressed messages file C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 5785 megabytes
-    Info: Processing ended: Wed Dec 11 12:37:33 2019
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 5783 megabytes
+    Info: Processing ended: Wed Dec 11 17:21:09 2019
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:11
 
 

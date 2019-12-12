@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Wed Dec 11 12:37:25 2019
+Wed Dec 11 17:21:01 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 11 12:37:25 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 11 17:21:01 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
@@ -595,7 +595,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 11 12:37:16 2019
+    Info: Processing started: Wed Dec 11 17:20:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -629,14 +629,14 @@ Info (10041): Inferred latch for "value[4]" at SevenSeg.v(16) File: C:/Users/ada
 Info (10041): Inferred latch for "value[5]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
 Info (10041): Inferred latch for "value[6]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
 Info (10041): Inferred latch for "value[7]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CD0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 64
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CD0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 62
 Warning (10230): Verilog HDL assignment warning at clock_divider.v(27): truncated value with size 32 to match size of target (24) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v Line: 27
-Info (12128): Elaborating entity "CSL" for hierarchy "CSL:CSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 68
-Info (12128): Elaborating entity "NSL" for hierarchy "NSL:NSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 70
+Info (12128): Elaborating entity "CSL" for hierarchy "CSL:CSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 66
+Info (12128): Elaborating entity "NSL" for hierarchy "NSL:NSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 68
 Warning (10235): Verilog HDL Always Construct warning at NSL.v(19): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 19
 Warning (10235): Verilog HDL Always Construct warning at NSL.v(23): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 23
 Warning (10235): Verilog HDL Always Construct warning at NSL.v(25): variable "turn_sig_latch" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 25
-Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:SM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 72
+Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:SM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 70
 Warning (10230): Verilog HDL assignment warning at state_machine.v(24): truncated value with size 32 to match size of target (2) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 24
 Warning (10230): Verilog HDL assignment warning at state_machine.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 30
 Info (12128): Elaborating entity "memory" for hierarchy "state_machine:SM0|memory:M0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 34
@@ -661,8 +661,8 @@ Info (12133): Instantiated megafunction "state_machine:SM0|memory:M0|altsyncram:
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n9b1.tdf
     Info (12023): Found entity 1: altsyncram_n9b1 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_n9b1" for hierarchy "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "output_mux" for hierarchy "output_mux:OM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 74
-Info (12128): Elaborating entity "OL" for hierarchy "OL:OL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 76
+Info (12128): Elaborating entity "output_mux" for hierarchy "output_mux:OM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 72
+Info (12128): Elaborating entity "OL" for hierarchy "OL:OL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 74
 Warning (10230): Verilog HDL assignment warning at OL.v(49): truncated value with size 32 to match size of target (2) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 49
 Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[1]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
 Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[2]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
@@ -745,9 +745,9 @@ Info (21057): Implemented 145 device resources after synthesis - the final resou
     Info (21064): Implemented 3 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Wed Dec 11 12:37:25 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Processing ended: Wed Dec 11 17:21:01 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

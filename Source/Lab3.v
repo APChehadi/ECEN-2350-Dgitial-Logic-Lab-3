@@ -34,9 +34,6 @@ SevenSeg SS4(.HEX(HEX4), .NUM(8'd88));
 SevenSeg SS5(.HEX(HEX5), .NUM(8'd88));
 
 // Wire Declarations
-wire key1_latch;
-wire key1_mem;
-wire key1;
 wire [2:0] CurrentState;
 wire [2:0] NextState;
 wire [2:0] CurrentState_mem;
@@ -53,6 +50,7 @@ assign reset_n = reset_latch;
 
 // Latch KEY[1] right/left turn signal
 reg turn_sig_latch = 1'b0;
+wire key1_latch;
 always @(negedge KEY[1])
 	begin
 		turn_sig_latch <= ~turn_sig_latch;
